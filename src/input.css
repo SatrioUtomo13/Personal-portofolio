@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 .hamburger-line {
-    @apply bg-black transition-none
+    @apply w-[30px] h-[2px] my-2 block bg-white
+}
+.link-active {
+    @apply hidden
 }
 
 .hamburger-active > span:nth-child(1){
@@ -18,4 +21,11 @@
 
 .navbar-fixed {
     @apply fixed z-10 py-5 bg-[#F4F6FA]
+}
+
+.link-fixed {
+    @apply text-[#010101] lg:text-white hover:text-[#fbaa33] transition duration-300
+}
+.link-scroll {
+    @apply text-[#010101] lg:text-[#010101] hover:text-[#fbaa33] transition duration-300
 }
