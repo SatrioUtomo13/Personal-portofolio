@@ -1,3 +1,5 @@
+/* =============== NAVBAR ================= */
+
 // hamburger
 const btnClick = document.getElementById('btn-click');
 const hamburgerLine = document.querySelectorAll('#btn-click span');
@@ -91,3 +93,35 @@ link[5].addEventListener('mouseout', function() {
     contactSpan.style.display = 'none';
 })
 
+
+
+/* =============== ABOUT SECTION ================= */
+
+// get elements
+let linkProfile = document.getElementById('link-profile');
+let linkSkill = document.getElementById('link-skill');
+let linkCertificate = document.getElementById('link-certificate');
+let profile = document.getElementById('about-profile');
+let skill = document.getElementById('about-skill');
+let certificate = document.getElementById('about-certificate');
+
+// profile click
+linkProfile.addEventListener('click', function () {
+    profile.classList.remove('hidden');
+    skill.classList.add('hidden');
+    certificate.classList.add('hidden');
+});
+
+// skill click
+linkSkill.addEventListener('click', function () {
+    profile.classList.add('hidden');
+    skill.classList.remove('hidden');
+    certificate.classList.add('hidden');
+});
+
+// certificate click
+linkCertificate.addEventListener('click', function () {
+    profile.classList.add('hidden');
+    skill.classList.add('hidden');
+    certificate.classList.remove('hidden');
+});
